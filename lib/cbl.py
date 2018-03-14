@@ -27,8 +27,11 @@ class Cbl(object):
         self.dimension = None
         self.points = None
 
-        # 
-self.initial_density
+        # Initial density
+        self.initial_density = None
+
+        # Method for integrating
+        self.method = None
 
     #
     # Method for creating the numerical domain
@@ -42,7 +45,10 @@ self.initial_density
         param end: tuple. End point for the domain.
         param points: tuple. Number of points for the numerical domain.
 
-        output ....
+        output: tuple. 
+                If dimension is one, then (self.x, self.dx, self.grid).
+                If dimension is two, then (self.x, self.dx, self.y, self.dy, self.grid).
+
 
         Examples
         ========
